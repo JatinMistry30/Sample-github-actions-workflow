@@ -10,6 +10,7 @@ on:
       - master
     types:
       - closed
+      - opened
   workflow_dispatch:
 
 jobs:
@@ -35,10 +36,11 @@ jobs:
         - name: "Running on pull request closed"
           run: echo "Runnig on pull request closed"
 
-          
+
   on-workflow-dispatch:
     if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
         - name: "Running on workflow dispatch"
           run: echo "Running on workflow dispatch"
+  
